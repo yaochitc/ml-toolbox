@@ -19,10 +19,10 @@ def drop_const(dfs):
     for df in dfs:
         df.drop(columns=const_cols, inplace=True)
 
-def set_type(dfs, cols, type):
+def set_type(dfs, cols, dtype):
     for col in cols:
         for df in dfs:
-            df[col] = df[col].astype(type)
+            df[col] = df[col].astype(dtype)
 
 def label_encode(dfs, cols):
     for col in cols:
